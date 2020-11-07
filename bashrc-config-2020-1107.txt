@@ -1,0 +1,30 @@
+# customized:
+## 自定义命令提示符：
+PS1="=>[\#][\u][\w]\$ "
+
+## 命令简化：
+alias rm='rm -i'
+alias ll="ls -hl --color=auto"
+alias cl='clear'
+alias cll='clear & ls -hl'
+
+alias sshgo="systemctl start sshd.service"
+alias sshoff="systemctl stop sshd.service"
+
+alias mdav='sudo mount -t davfs https://dav.jianguoyun.com/dav/ ~/media/y-nutStore/'
+
+
+## 启动软件：
+alias syncon='syncthing -no-browser & exit'
+alias syncedit='syncthing -browser-only & exit'
+
+alias web="elinks -anonymous 1 "
+
+alias tor="tor-browser & exit"
+alias ggchm="/usr/bin/google-chrome-unstable --incognito"
+alias chrome="/usr/bin/google-chrome-unstable --incognito & exit"
+
+alias vlc="/usr/bin/vlc"
+alias ffx="/opt/firefox/firefox"
+alias ffd="/opt/firefox/firefox & exit"
+alias tmv="/opt/teamviewer/teamviewer & exit"
