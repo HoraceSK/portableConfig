@@ -1,12 +1,3 @@
-filetype plugin on
-map <F5> :call PRUN()<CR>
-func! PRUN()
-    exec "w" 
-    if &filetype == 'python'
-        exec "!python %"
-    endif
-endfunc
-
 map sl :set splitright<CR>:vsplit<CR>
 map sh :set nosplitright<CR>:vsplit<CR>
 map sk :set nosplitbelow<CR>:split<CR>
@@ -22,6 +13,12 @@ map <down> :res +5<CR>
 map <left> :vertical resize +5<CR>
 map <right> :vertical resize -5<CR>
 
+map tn :tabe<CR>
+map th :-tabnext<CR>
+map tl :+tabnext<CR>
+
+map sv <C-w>t<C-w>H
+map sh <C-w>t<C-w>K
 
 set nocompatible
 
