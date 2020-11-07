@@ -11,10 +11,10 @@ map <LEADER>j <C-w>j
 map <LEADER>k <C-w>k
 map <LEADER>l <C-w>l
 
-map <up> :res -5<CR>
-map <down> :res +5<CR>
-map <left> :vertical resize +5<CR>
-map <right> :vertical resize -5<CR>
+map <up> :res +5<CR>
+map <down> :res -5<CR>
+map <left> :vertical resize -5<CR>
+map <right> :vertical resize +5<CR>
 
 map tn :tabe<CR>
 map th :-tabnext<CR>
