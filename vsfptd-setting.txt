@@ -1,0 +1,15 @@
+局域网建立ftp服务步骤:
+首先,下载安装vsftpd软件:
+sudo apt install vsftpd
+或者:
+sudo pacman -S vsftpd
+然后,编辑配置文件:
+sudo vim /etc/vsftpd.conf
+在最后加上一句,指定服务端要共享的文件夹,比如:
+anon_root=/home/debian/winShare
+最后,开启vsftpd服务:
+sudo systemctl start vsftpd.service
+或者直接设置成开机启动:
+sudo systemctl enable vsftpd.service
+参考链接:
+https://www.bilibili.com/video/BV167411g7tG?from=search&seid=13681923752098452334

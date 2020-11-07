@@ -1,0 +1,60 @@
+filetype plugin on
+map <F5> :call PRUN()<CR>
+func! PRUN()
+    exec "w" 
+    if &filetype == 'python'
+        exec "!python %"
+    endif
+endfunc
+
+map sl :set splitright<CR>:vsplit<CR>
+map sh :set nosplitright<CR>:vsplit<CR>
+map sk :set nosplitbelow<CR>:split<CR>
+map sj :set splitbelow<CR>:split<CR>
+
+map <LEADER>h <C-w>h
+map <LEADER>j <C-w>j
+map <LEADER>k <C-w>k
+map <LEADER>l <C-w>l
+
+map <up> :res -5<CR>
+map <down> :res +5<CR>
+map <left> :vertical resize +5<CR>
+map <right> :vertical resize -5<CR>
+
+
+set nocompatible
+
+filetype indent on
+set encoding=utf-8
+set nobackup
+set autochdir
+set visualbell
+set history=30
+set autoread
+
+set t_Co=256
+set number
+set cursorline
+set laststatus=2
+set ruler
+set showmatch
+
+set hlsearch
+set incsearch
+set smartcase
+
+syntax on
+set showmode
+set showcmd
+set wrap
+set linebreak
+set wrapmargin=2
+
+set list lcs=tab:\|\ -
+set autoindent
+set shiftwidth=4
+set expandtab
+set softtabstop=4
+set ts=4
+%retab!
