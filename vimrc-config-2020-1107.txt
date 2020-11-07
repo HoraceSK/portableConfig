@@ -3,6 +3,9 @@ map sh :set nosplitright<CR>:vsplit<CR>
 map sk :set nosplitbelow<CR>:split<CR>
 map sj :set splitbelow<CR>:split<CR>
 
+map sv <C-w>t<C-w>H
+map sh <C-w>t<C-w>K
+
 map <LEADER>h <C-w>h
 map <LEADER>j <C-w>j
 map <LEADER>k <C-w>k
@@ -16,9 +19,6 @@ map <right> :vertical resize -5<CR>
 map tn :tabe<CR>
 map th :-tabnext<CR>
 map tl :+tabnext<CR>
-
-map sv <C-w>t<C-w>H
-map sh <C-w>t<C-w>K
 
 set nocompatible
 
