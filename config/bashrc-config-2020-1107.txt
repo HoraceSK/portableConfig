@@ -15,12 +15,12 @@ alias sshoff="systemctl stop sshd.service"
 
 alias mdav='sudo mount -t davfs https://dav.jianguoyun.com/dav/ ~/media/y-nutStore/'
 
-
 ## 启动软件：
 alias syncon='syncthing -no-browser & exit'
 alias syncedit='syncthing -browser-only & exit'
 
 alias web="elinks -anonymous 1 "
+alias doge="elinks -anonymous 1 www.dogedogego.com"
 
 alias tor="tor-browser & exit"
 alias ggchm="/usr/bin/google-chrome-unstable --incognito"
