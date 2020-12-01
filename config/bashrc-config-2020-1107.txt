@@ -1,7 +1,13 @@
 # customized:
 ## 自定义命令提示符：
+<<<<<<< HEAD:bashrc-config-2020-1107.txt
 # PS1="=>[\#][\u][\w]\$ "
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\][\u]\[\033[00m\][\[\033[01;34m\]\w\[\033[00m\]]\n==>[\#]\$ '
+=======
+#PS1="=>[\#][\u][\w]\$ "
+#PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\][\u]\[\033[00m\][\[\033[01;34m\]\w\[\033[00m\]]\n==>[\#]\$ '
+PS1='\[\033[01;32m\][\u]\[\033[00m\][\[\033[01;34m\]\w\[\033[00m\]]\n==>[\#]\$ '
+>>>>>>> 91a63bcc68b1dc6a93df98b978e04b2c340b5872:config/bashrc-config-2020-1107.txt
 
 ## 命令简化：
 alias rm='rm -i'
@@ -14,12 +20,12 @@ alias sshoff="systemctl stop sshd.service"
 
 alias mdav='sudo mount -t davfs https://dav.jianguoyun.com/dav/ ~/media/y-nutStore/'
 
-
 ## 启动软件：
 alias syncon='syncthing -no-browser & exit'
 alias syncedit='syncthing -browser-only & exit'
 
 alias web="elinks -anonymous 1 "
+alias doge="elinks -anonymous 1 www.dogedogego.com"
 
 alias tor="tor-browser & exit"
 alias ggchm="/usr/bin/google-chrome-unstable --incognito"
