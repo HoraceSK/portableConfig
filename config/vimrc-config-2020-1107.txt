@@ -3,22 +3,9 @@ map <F6> :call PRUN()<CR>
 func! PRUN()
     exec "w"
     if &filetype == 'python'
-        exec "!python %"
+        exec "!clear & python %"
     endif
 endfunc
-
-map sl :set splitright<CR>:vsplit<CR>
-map sh :set nosplitright<CR>:vsplit<CR>
-map sk :set nosplitbelow<CR>:split<CR>
-map sj :set splitbelow<CR>:split<CR>
-
-map sv <C-w>t<C-w>H
-map sh <C-w>t<C-w>K
-
-map <LEADER>h <C-w>h
-map <LEADER>j <C-w>j
-map <LEADER>k <C-w>k
-map <LEADER>l <C-w>l
 
 map <up> :res +5<CR>
 map <down> :res -5<CR>
@@ -29,8 +16,20 @@ map tn :tabe<CR>
 map th :-tabnext<CR>
 map tl :+tabnext<CR>
 
-set nocompatible
+map sv <C-w>t<C-w>H
+map sh <C-w>t<C-w>K
 
+map sl :set splitright<CR>:vsplit<CR>
+map sh :set nosplitright<CR>:vsplit<CR>
+map sk :set nosplitbelow<CR>:split<CR>
+map sj :set splitbelow<CR>:split<CR>
+
+map <LEADER>h <C-w>h
+map <LEADER>j <C-w>j
+map <LEADER>k <C-w>k
+map <LEADER>l <C-w>l
+
+set nocompatible
 filetype indent on
 set encoding=utf-8
 set nobackup
@@ -57,6 +56,7 @@ set wrap
 set linebreak
 set wrapmargin=2
 
+set foldmethod=indent
 set list lcs=tab:\|\ -
 set autoindent
 set shiftwidth=4
