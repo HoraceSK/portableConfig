@@ -67,10 +67,12 @@ pacman -Siv geany
 ```
 numpy
 pandas
+openpyxl
 scrapy
 scipy
 sklearn
-openpyxl, xlrd, xlwt
+xlrd
+xlwt
 python-docx
 selenium
 matplotlib
@@ -91,6 +93,19 @@ sudo pacman -S geckodriver
 #debian系linux安装：
 apt show chromium-driver
 sudo apt install chromium-driver
+```
+3. 批量安装python库.将lib的名字写在文件里，一行一个，执行命令：
+```bash
+sudo pip -r [pylibfile] -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+4. 使用国内源.
+[Python换国内源参考博客](https://www.jianshu.com/p/dfbb90995a2c)
+修改`~/.pip/pip.conf`文件（如没有就创建一个），写入以下内容：
+```bash
+[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+[install]
+trusted-host=mirrors.aliyun.com
 ```
 ### 图像处理软件
 推荐使用gimp,photoshop90%的功能它都有，安装后大小110.65 MiB:
