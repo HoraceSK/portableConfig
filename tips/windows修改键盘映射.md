@@ -1,7 +1,7 @@
 # windows 修改键盘映射
 ## 描述
 `CapsLock`键使用频率较低，而在`vim`编辑器中经常要按`ESC`键，于是考虑对调这两个按键的键盘映射。
-参考教程：[iWindows10 修改键位映射](https://blog.csdn.net/lhdalhd1996/article/details/90741092)
+参考教程：[Windows10 修改键位映射](https://blog.csdn.net/lhdalhd1996/article/details/90741092)
 ## 设置过程
 修改键盘映射需要修改注册表。
 - 前8组00是版本号和头部字节，不要修改。
