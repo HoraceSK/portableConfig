@@ -4,6 +4,8 @@
 参考教程：[Windows10 修改键位映射](https://blog.csdn.net/lhdalhd1996/article/details/90741092)
 ## 设置过程
 修改键盘映射需要修改注册表。
+修改键位的注册表文件位于`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout`，如下图：
+![修改键盘映射的注册表文件](./_pictures_/修改键盘映射的注册表文件-如删除则撤销修改.png)
 - 前8组00是版本号和头部字节，不要修改。
 - 接下来4组表示映射数，如图所示，我填写为03 00 00 00。其中“03”表示有两组映射。
 若要映射多组，只需增加相应的值即可，如映射3组为"04"，映射5组为"06"，其最小为值为“02”，表示只映射一组。
