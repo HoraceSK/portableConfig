@@ -1,5 +1,7 @@
 # customized:
 ## 自定义命令提示符：
+PS1='\[\033[01;32m\][\u]\[\033[00m\][\[\033[01;34m\]\w\[\033[00m\]]\n==>[\#]\$ '
+
 <<<<<<< HEAD:bashrc-config-2020-1107.txt
 # PS1="=>[\#][\u][\w]\$ "
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\][\u]\[\033[00m\][\[\033[01;34m\]\w\[\033[00m\]]\n==>[\#]\$ '
@@ -35,3 +37,17 @@ alias vlc="/usr/bin/vlc"
 alias ffx="/opt/firefox/firefox"
 alias ffd="/opt/firefox/firefox & exit"
 alias tmv="/opt/teamviewer/teamviewer & exit"
+
+# functions:
+function findf (){
+find . -type f -name '*'$1'*';
+};
+function findd (){
+find . -type d -name '*'$1'*';
+};
+function findsk(){
+echo '-----files:-----';
+find . -type f -name '*'$1'*';
+echo '-----folders:-----';
+find . -type d -name '*'$1'*';
+};
