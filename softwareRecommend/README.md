@@ -44,13 +44,22 @@ sudo pacman -S youtube-dl-git
 ```
 
 ### 远程控制软件
-推荐teamviewer和tigervnc。
+- 推荐teamviewer和tigervnc。
 ```bash
 # 查看如下两款软件：
 pacman -Ss teamviewer
 pacman -Ss tigervnc
 ```
 还有一款开源但收费的B/S架构的远控软件[gotohttp](https://gotohttp.com/),可访问官网`https://gotohttp.com/goto/download.12x`下载。
+- 此外，`remmina`()[]也是一款相当不错的开源远程软件，与`tigervnc`配合可以显示远程桌面。
+- 使用ssh进行X协议的转发，需要安装软件`xephyr`:
+```bash
+sudo pacman -S xorg-server-xephyr
+```
+安装之后，使用ssh命令连接远程服务器，即可转发远程桌面：
+```bash
+ssh -X [login_name]@[remote_ip_address]
+```
 ### IDE软件
 代码编辑器使用自带的Kate就可以了，Kate功能很强大。
 这里推荐四个IDE，eclipse,pycharm,spyder和geany.
