@@ -41,6 +41,7 @@ Failed to connect
 ```
  If you encountered problem above, try this: <br>
 transform `/etc/resolv.conf` into a soft link.
+
  ```bash
  sudo mv /etc/resolv.conf /etc/resolv_backup.conf
  sudo ln -s /var/run/NetworkManager/resolv.conf /etc/resolv.conf
