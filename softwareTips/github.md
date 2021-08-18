@@ -2,12 +2,23 @@
 ## git push需要输入 用户名和密码
 ### 解决方法
 
+- 编辑github本地项目文件下的`/.git/config`文件,找到如下设置的位置,把你的密码或者token填进去:
+
+```bash
+[remote "origin"]
+	url = https://[PassWd or Token]@github.com/YouGitID/[YourRepoName].git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+
+```
+- 进行记住密码的设置:
+
 ```bash
 # 方法一:
 git config --global credential.helper 'cache --timeout 604800'  #  这里设置账号信息被记住7200秒，两个小时,一周是604800秒。
 # 方法二:
 git config credential.helper store
 ```
+
 ### 参考链接
 - [git push/pull每次都需要输入密码的原因分析及解决](https://blog.csdn.net/tsq292978891/article/details/89316612)
 - [解决 git pull/push 每次都要输入用户名密码的问题](https://www.jianshu.com/p/5b81c9ce505c)

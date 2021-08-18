@@ -1,4 +1,7 @@
-set list lcs=tab:\|\ 
+" 不使用任何vim插件的情况下,此配置乃是vim好用的极限了
+" vim常用命令总结:https://www.cnblogs.com/chenyablog/p/10399601.html
+
+"按下<F6>运行当前python脚本:
 map <F6> :call PRUN()<CR>
 func! PRUN()
     exec "w"
@@ -7,60 +10,68 @@ func! PRUN()
     endif
 endfunc
 
-map <up> :res +5<CR>
-map <down> :res -5<CR>
-map <left> :vertical resize -5<CR>
-map <right> :vertical resize +5<CR>
-
-map tn :tabe<CR>
-map th :-tabnext<CR>
-map tl :+tabnext<CR>
-
-map sv <C-w>t<C-w>H
-map sh <C-w>t<C-w>K
-
+" 单文件分屏(分割)
 map sl :set splitright<CR>:vsplit<CR>
 map sh :set nosplitright<CR>:vsplit<CR>
 map sk :set nosplitbelow<CR>:split<CR>
 map sj :set splitbelow<CR>:split<CR>
 
-map <LEADER>h <C-w>h
-map <LEADER>j <C-w>j
-map <LEADER>k <C-w>k
-map <LEADER>l <C-w>l
+" 分屏(分割)时,调整窗口大小
+map <up> :res +5<CR>
+map <down> :res -5<CR>
+map <left> :vertical resize -5<CR>
+map <right> :vertical resize +5<CR>
 
-set nocompatible
-filetype indent on
-set encoding=utf-8
-set nobackup
-set autochdir
-set visualbell
-set history=30
-set autoread
+" 在分割窗口中跳转
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
-set t_Co=256
-set number
-set cursorline
-set laststatus=2
-set ruler
-set showmatch
+" 切换水平分割和垂直分割
+map sv <C-w>t<C-w>H
+map sh <C-w>t<C-w>K
 
-set hlsearch
-set incsearch
-set smartcase
+" 多tab操作
+map tn :tabe<CR>
+map th :-tabnext<CR>
+map tl :+tabnext<CR>
 
-syntax on
-set showmode
-set showcmd
-set wrap
-set linebreak
-set wrapmargin=2
+# 其他美化效果
+set nocompatible "与vi不兼容
+set autoread "自动重新加载文件
+set encoding=utf-8 "默认encoding
+set nobackup "不保存本地backup文件
+set autochdir "自动切换目录
+set visualbell "系统提示时屏幕会闪一下
+set history=30 "保留前30条操作命令历史
+set showmode "底部显示当前是插入模式还是命令模式
+set showcmd "底部显示当前输入的命令
 
-set foldmethod=indent
-set list lcs=tab:\|\ -
-set autoindent
-set shiftwidth=4
-set expandtab
-set softtabstop=4
-set ts=4
+set t_Co=256 "256色
+set number "显示行号
+set cursorline "高亮当前行
+" set cursorcolumn "高亮当前列
+set laststatus=2 "显示当前状态行
+set ruler "显示标尺
+set showmatch "高亮显示组合符号,如[],()
+
+set hlsearch "highlight search result
+set incsearch "查找时预览高亮显示当前匹配结果
+set smartcase "搜索时智能判断是否匹配大小写
+
+syntax on "开启语法高亮
+set wrap "自动折行
+set linebreak "不会在单词内部折行,在特定符号处折行
+set wrapmargin=2 "折行处与窗口右边缘之间空出的字符数
+
+set autoindent "开启代码折叠
+set foldmethod=indent "设置代码折叠方式,按缩进折叠
+filetype indent on "根据文件类别使用不同的缩进值
+set tabstop=4 "设置tab的值为4个空格
+set shiftwidth=4 "每一级缩进为4个空格.按下两次>和<,调整当前行缩进级别
+set softtabstop=4 "tab转为多少个空格
+set expandtab "自动将tab转为空格,因为不同编辑器tab键长度不同
+
 %retab!
+set list lcs=tab:\|\ 
