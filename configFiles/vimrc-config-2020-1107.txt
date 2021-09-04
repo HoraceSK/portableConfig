@@ -1,4 +1,4 @@
-" 不使用任何vim插件的情况下,此配置乃是vim好用的极限了
+" 不使用任何vim插件的情况下,此配置乃是vim的最优配置了。
 " vim常用命令总结:https://www.cnblogs.com/chenyablog/p/10399601.html
 
 "按下<F6>运行当前python脚本:
