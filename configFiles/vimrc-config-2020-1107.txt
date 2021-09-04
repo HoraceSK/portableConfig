@@ -1,5 +1,6 @@
 " 不使用任何vim插件的情况下,此配置乃是vim的最优配置了。
 " vim常用命令总结:https://www.cnblogs.com/chenyablog/p/10399601.html
+" 将如下配置复制到~/.vim/vimrc文件末尾，或直接替代其全文，重启vim即可生效。
 
 "按下<F6>运行当前python脚本:
 map <F6> :call PRUN()<CR>
