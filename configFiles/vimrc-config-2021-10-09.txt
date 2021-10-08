@@ -1,21 +1,29 @@
+" 2021-10-09.
 " 不使用任何vim插件的情况下,此配置乃是vim的最优配置了。
 " vim常用命令总结:https://www.cnblogs.com/chenyablog/p/10399601.html
 " 将如下配置复制到~/.vim/vimrc文件末尾，或直接替代其全文，重启vim即可生效。
 
-"按下<F6>运行当前python脚本:
+" Press <F6> to compile:
 map <F6> :call PRUN()<CR>
-func! PRUN()
+func! COMPILE()
     exec "w"
     if &filetype == 'python'
         exec "!clear & python %"
     endif
-endfunc
-
-map <F7> :call COMPILE()<CR>
-func! COMPILE()
-    exec "w"
     if &filetype == 'cpp'
         exec "!g++ %"
+    endif
+    if &filetype == 'rust'
+        exec "!rustc %"
+    endif
+endfunc
+
+" Press <F7> to run current project；
+map <F7> :call COMPILE()<CR>
+func! PRJRUN()
+    exec "w"
+    if &filetype == 'rust'
+        exec "!cargo run"
     endif
 endfunc
 
