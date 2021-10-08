@@ -4,7 +4,7 @@
 " 将如下配置复制到~/.vim/vimrc文件末尾，或直接替代其全文，重启vim即可生效。
 
 " Press <F6> to compile:
-map <F6> :call PRUN()<CR>
+map <F6> :call COMPILE()<CR>
 func! COMPILE()
     exec "w"
     if &filetype == 'python'
@@ -19,7 +19,7 @@ func! COMPILE()
 endfunc
 
 " Press <F7> to run current project；
-map <F7> :call COMPILE()<CR>
+map <F7> :call PRJRUN()<CR>
 func! PRJRUN()
     exec "w"
     if &filetype == 'rust'
