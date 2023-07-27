@@ -1,4 +1,4 @@
-" 2021-10-09.
+" 2023-07-27.
 " 不使用任何vim插件的情况下,此配置乃是vim的最优配置了。
 " vim常用命令总结:https://www.cnblogs.com/chenyablog/p/10399601.html
 " 将如下配置复制到~/.vim/vimrc文件末尾，或直接替代其全文，重启vim即可生效。
@@ -71,6 +71,7 @@ set visualbell "系统提示时屏幕会闪一下
 set history=30 "保留前30条操作命令历史
 set showmode "底部显示当前是插入模式还是命令模式
 set showcmd "底部显示当前输入的命令
+set cmdheight=2 "命令行（在状态行下）的高度=2
 
 set t_Co=256 "256色
 set number "显示行号
